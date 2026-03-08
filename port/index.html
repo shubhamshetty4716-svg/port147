@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shubham Sethi | Developer Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+/* GLOBAL */
+
+html{
+scroll-behavior:smooth;
+}
+
+:root{
+--accent:#38bdf8;
+--bg-main:#0f172a;
+--bg-alt:#0b1120;
+--text-primary:#f8fafc;
+--text-dim:#94a3b8;
+--border-dim:#334155;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:system-ui;
+background:var(--bg-main);
+color:var(--text-primary);
+line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:1.5rem 10%;
+border-bottom:1px solid var(--border-dim);
+position:sticky;
+top:0;
+background:var(--bg-main);
+z-index:100;
+}
+
+.logo{
+font-weight:800;
+font-size:1.3rem;
+}
+
+.logo span{
+color:var(--accent);
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:2rem;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--text-dim);
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:white;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+flex-direction:column;
+}
+
+/* PROFILE IMAGE */
+
+.hero-image{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid var(--accent);
+margin-bottom:25px;
+box-shadow:0 0 25px rgba(56,189,248,0.6);
+transition:0.4s;
+}
+
+.hero-image:hover{
+transform:scale(1.05);
+box-shadow:0 0 40px rgba(56,189,248,1);
+}
+
+/* NAME ANIMATION */
+
+.animated-name{
+font-size:3.6rem;
+font-weight:900;
+letter-spacing:4px;
+
+background:linear-gradient(
+90deg,
+#38bdf8,
+#60a5fa,
+#22d3ee,
+#38bdf8
+);
+
+background-size:300%;
+-webkit-background-clip:text;
+color:transparent;
+
+animation:shine 5s linear infinite;
+}
+
+@keyframes shine{
+0%{background-position:0%;}
+100%{background-position:300%;}
+}
+
+.hero p{
+color:var(--text-dim);
+font-size:1.2rem;
+margin-top:10px;
+}
+
+.social-icons{
+margin-top:20px;
+font-size:1.6rem;
+}
+
+.social-icons a{
+margin:0 10px;
+color:var(--text-dim);
+transition:.3s;
+}
+
+.social-icons a:hover{
+color:var(--accent);
+}
+
+/* SECTIONS */
+
+.container{
+padding:100px 10%;
+}
+
+.bg-alt{
+background:var(--bg-alt);
+}
+
+.section-title{
+text-align:center;
+font-size:2rem;
+margin-bottom:50px;
+}
+
+/* SKILLS */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.skill-group{
+background:#1f2937;
+padding:30px;
+border-radius:12px;
+text-align:center;
+border-bottom:4px solid var(--accent);
+transition:.4s;
+}
+
+.skill-group:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+
+/* TIMELINE */
+
+.timeline{
+position:relative;
+border-left:2px solid var(--accent);
+padding-left:40px;
+max-width:800px;
+margin:auto;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:-2px;
+top:0;
+height:100%;
+width:2px;
+background:linear-gradient(to bottom,transparent,var(--accent),transparent);
+animation:lineGlow 4s infinite linear;
+}
+
+@keyframes lineGlow{
+0%{opacity:.3;}
+50%{opacity:1;}
+100%{opacity:.3;}
+}
+
+.edu-item{
+position:relative;
+margin-bottom:40px;
+padding:20px;
+background:#1f2937;
+border-radius:10px;
+border-left:3px solid var(--accent);
+transition:.4s;
+}
+
+.edu-item:hover{
+transform:translateX(10px);
+box-shadow:0 10px 30px rgba(0,0,0,.6);
+}
+
+.edu-item::before{
+content:'';
+position:absolute;
+left:-50px;
+top:22px;
+width:18px;
+height:18px;
+background:var(--accent);
+border-radius:50%;
+box-shadow:0 0 10px var(--accent),0 0 25px var(--accent);
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);box-shadow:0 0 5px var(--accent);}
+50%{transform:scale(1.4);box-shadow:0 0 25px var(--accent);}
+100%{transform:scale(1);box-shadow:0 0 5px var(--accent);}
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:40px;
+border-top:1px solid var(--border-dim);
+color:var(--text-dim);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.container{
+padding:60px 5%;
+}
+
+.animated-name{
+font-size:2.5rem;
+}
+
+.hero-image{
+width:140px;
+height:140px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">SHUBHAM<span>.</span></div>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#education">Education</a></li>
+</ul>
+
+</nav>
+
+<section id="home" class="hero">
+
+<img src="shubham.jpg" class="hero-image" alt="Shubham Sethi">
+
+<h1 class="animated-name">SHUBHAM SETHI</h1>
+
+<p>B.Tech CSE | Aspiring Full Stack Developer</p>
+
+<div class="social-icons">
+<a href="#"><i class="fab fa-github"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+</div>
+
+</section>
+
+<section id="skills" class="container bg-alt">
+
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-group">C / C++</div>
+<div class="skill-group">Python</div>
+<div class="skill-group">HTML / CSS</div>
+<div class="skill-group">JavaScript</div>
+<div class="skill-group">React</div>
+<div class="skill-group">Node.js</div>
+<div class="skill-group">Data Structures & Algorithms</div>
+<div class="skill-group">English Proficiency</div>
+
+</div>
+
+</section>
+
+<section id="education" class="container">
+
+<h2 class="section-title">Academic Journey</h2>
+
+<div class="timeline">
+
+<div class="edu-item">
+<h4>B.Tech in CSE (Expected 2028)</h4>
+<p>IIITDM Jabalpur</p>
+</div>
+
+<div class="edu-item">
+<h4>Class 12th - 80% (2024)</h4>
+<p>GEIS MH Marathi Jr College</p>
+</div>
+
+<div class="edu-item">
+<h4>Class 10th - 94% (2022)</h4>
+<p>Saraswati Vidyalaya Airoli</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Built with passion by Shubham Sethi © 2026</p>
+
+</footer>
+
+</body>
+</html>
+```
